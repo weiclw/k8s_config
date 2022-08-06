@@ -15,8 +15,10 @@ spec:
     spec:
       volumes:
       - name: minio-pv-storage
-        persistentVolumeClaim:
-          claimName: single-minio-pv-claim
+        hostPath:
+          path: /mnt
+        # persistentVolumeClaim:
+        #   claimName: single-minio-pv-claim
       containers:
       - image: quay.io/minio/minio:latest
         command: ["minio"]
