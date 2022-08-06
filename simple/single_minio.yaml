@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: single-minio
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: single-minio
+  template:
+    metadata:
+      labels:
+        app: single-minio
+    spec:
+      volumes:
+      - name: minio-pv-storage
+        persistentVolumeClaim:
+          claimName: single-minio-pv-claim
+      containers:
+      - image: quay.io/minio/minio:latest
+        command: ["minio"]
+        args: ["server", "/data", "--console-address", ":9001"]
+        name: single-minio
+        ports:
+        - containerPort: 9000
+        - containerPort: 9001
+        volumeMounts:
+        - mountPath: "/data"
+          name: minio-pv-storage
