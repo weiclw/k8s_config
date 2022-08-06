@@ -20,7 +20,7 @@ spec:
       containers:
       - image: quay.io/minio/minio:latest
         command: ["minio"]
-        args: ["server", "/data", "--console-address", "\":9001\""]
+        args: ["server", "/data", "--console-address", ":9001"]
         name: single-minio
         ports:
         - containerPort: 9000
