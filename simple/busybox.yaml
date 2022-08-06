@@ -14,7 +14,7 @@ spec:
         app: busybox
     spec:
       containers:
-      - image: busybox:latest
+      - image: k8s.gcr.io/pause:3.7
         name: busybox
         ports:
         - containerPort: 80
