@@ -7,7 +7,6 @@ metadata:
 spec:
   storageClassName: manual
   volumeMode: Block
-  fsType: ext4
   capacity:
     storage: 3Gi
   accessModes:
