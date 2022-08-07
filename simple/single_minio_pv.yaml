@@ -6,9 +6,11 @@ metadata:
     type: local
 spec:
   storageClassName: manual
+  volumeMode: Block
   capacity:
     storage: 2Gi
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: "/mnt/single_minio_pv"
+    path: "/tmp/single_minio_pv.data"
+  persistentVolumeReclaimPolicy: Delete
