@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: single-minio-pv-claim
+  name: single-minio-pv-claim2
 spec:
   # storageClassName: manual
   accessModes:
