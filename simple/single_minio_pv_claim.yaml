@@ -1,8 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: single-minio-pv-claim2
+  name: single-minio-pv-claim3
 spec:
+  volumeMode: Block
   storageClassName: manual
   accessModes:
     - ReadWriteMany
