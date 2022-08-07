@@ -18,9 +18,10 @@ spec:
         #hostPath:
         #  path: /mnt
         persistentVolumeClaim:
-          claimName: single-minio-pv-claim3
+          claimName: single-minio-pv-claim2
       containers:
       - image: quay.io/minio/minio:latest
+        imagePullPolicy: IfNotPresent
         command: ["minio"]
         args: ["server", "/data", "--console-address", ":9001"]
         name: single-minio
