@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: single-minio-pv-claim2
 spec:
-  volumeMode: Filesystem
+  volumeMode: Block
   storageClassName: manual
   accessModes:
     - ReadWriteMany

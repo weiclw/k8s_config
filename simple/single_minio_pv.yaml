@@ -6,7 +6,7 @@ metadata:
     type: local
 spec:
   storageClassName: manual
-  volumeMode: Filesystem
+  volumeMode: Block
   fsType: ext4
   capacity:
     storage: 3Gi
