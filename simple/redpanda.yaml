@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: redpanda
 spec:
-  replicas: 0
+  replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -20,16 +20,9 @@ spec:
       containers:
       - image: docker.redpanda.com/vectorized/redpanda:latest
         imagePullPolicy: IfNotPresent
-        command: ["redpanda"]
-        args: [
-          "start"
-        ]
-        name: single-minio
+        name: redpanda
         ports:
         - containerPort: 8081
         - containerPort: 8082
         - containerPort: 9092
         - containerPort: 9644
-        volumeMounts:
-        - mountPath: "/var/lib/redpanda/data"
-          name: redpanda-storage
