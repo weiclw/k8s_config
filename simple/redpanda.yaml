@@ -23,13 +23,7 @@ spec:
         command: ["redpanda"]
         args: [
           "start",
-          "--overprovisioned",
-          "--smp",
-          "1",
-          "--memory",
-          "1G",
-          "--reserve-memory",
-          "0M",
+          "--overprovisioned"
         ]
         name: single-minio
         ports:
