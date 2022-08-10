@@ -22,8 +22,7 @@ spec:
         imagePullPolicy: IfNotPresent
         command: ["redpanda"]
         args: [
-          "start",
-          "--overprovisioned"
+          "start"
         ]
         name: single-minio
         ports:
