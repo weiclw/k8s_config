@@ -30,8 +30,6 @@ spec:
           "1G",
           "--reserve-memory",
           "0M",
-          "--node-id",
-          "0",
           "--check",
           "false"
         ]
