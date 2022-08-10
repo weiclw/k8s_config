@@ -30,8 +30,6 @@ spec:
           "1G",
           "--reserve-memory",
           "0M",
-          "--check",
-          "false"
         ]
         name: single-minio
         ports:
